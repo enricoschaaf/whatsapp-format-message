@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-message-formatter",
+  "version": "1.0.0",
+  "scripts": {
+    "watch:tailwind": "postcss styles/tailwind.css -o public/index.css -w",
+    "build:tailwind": "NODE_ENV=production postcss styles/tailwind.css -o public/index.css",
+    "build": "rollup -c && npm run build:tailwind",
+    "dev": "rollup -c -w && npm run watch:tailwind && sirv public --single --dev",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@tailwindcss/ui": "^0.3.0",
+    "postcss-cli": "^7.1.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0",
+    "tailwindcss": "^1.4.6"
+  },
+  "dependencies": {
+    "sirv-cli": "^0.4.4"
+  }
+}
